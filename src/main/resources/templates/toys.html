@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Toys</title>
+</head>
+<body>
+
+<h1>Toys List</h1>
+
+<table>
+    <thead>
+    <th>ID</th>
+    <th>NAME</th>
+    </thead>
+    <tbody>
+    <tr th:each ="toy : ${toys}">
+        <td><span th:text ="${toy.id}">id</span></td>
+        <td><span th:text ="${toy.name}">name</span></td>
+
+
+
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+<form action="/">
+    <input type="submit" value="Go to start page">
+</form>
+
+
+
+
+
+</body>
+</html>
