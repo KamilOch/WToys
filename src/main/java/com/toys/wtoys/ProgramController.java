@@ -57,4 +57,12 @@ public class ProgramController {
         return "redirect:/toysList";
     }
 
+    @GetMapping("/deleteToy/{id}")
+    public String deleteToyById(
+        @PathVariable long id
+    ){
+        toyService.deleteToy(id);
+        return "redirect:/toysList";
+    }
+
 }

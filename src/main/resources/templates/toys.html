@@ -25,6 +25,13 @@
             </form>
         </td>
 
+        <td>
+            <form th:action="@{/deleteToy/{id}(id=${toy.id})}" th:object="${toy}">
+                <input type="hidden" field="${toy}">
+                <input type="submit" value="Delete">
+            </form>
+        </td>
+
 
     </tr>
     </tbody>
