@@ -18,6 +18,12 @@
         <td><span th:text ="${toy.id}">id</span></td>
         <td><span th:text ="${toy.toyName}">name</span></td>
 
+        <td>
+            <form th:action="@{/editToy/{id}(id=${toy.id})}" th:object="${toy}">
+                <input type="hidden" field="${toy}">
+                <input type="submit" value="Edit">
+            </form>
+        </td>
 
 
     </tr>

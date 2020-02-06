@@ -19,11 +19,22 @@ public class ToyService {
     public List<ToyEntity> getAllToys() {
         return repository.findAll().stream()
                 .map(it-> ToyEntity.builder().id(it.getId()).toyName(it.getToyName()).build()).collect(Collectors.toList());
-//                .map(it-> new ToyEntity(it.getId(),it.getToyName())).collect(Collectors.toList());
     }
 
     public void addToy(String name){
         ToyEntity newToy = ToyEntity.builder().toyName(name).build();
         repository.save(newToy);
     }
+
+    public ToyEntity findById(long id) {
+        return repository.findById(id).orElseThrow(IllegalArgumentException::new);
+    }
+
+    public void editToy(long id, String name) {
+        ToyEntity editedToy = findById(id);
+        editedToy.setToyName(name);
+        repository.save(editedToy);
+    }
+
+
 }
