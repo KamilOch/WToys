@@ -16,7 +16,7 @@
     <tbody>
     <tr th:each ="toy : ${toys}">
         <td><span th:text ="${toy.id}">id</span></td>
-        <td><span th:text ="${toy.name}">name</span></td>
+        <td><span th:text ="${toy.toyName}">name</span></td>
 
 
 
@@ -27,6 +27,10 @@
 <br/>
 <form action="/">
     <input type="submit" value="Go to start page">
+</form>
+<br/>
+<form action="/addToy">
+    <input type="submit" value="add new toy">
 </form>
 
 

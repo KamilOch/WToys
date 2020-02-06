@@ -1,14 +1,14 @@
 package com.toys.wtoys.toy;
 
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Builder
 @Data
+
+@AllArgsConstructor
+@NoArgsConstructor
 
 @Entity
 @Table(name = "toys")
